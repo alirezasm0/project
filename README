@@ -2,4 +2,16 @@ Introduction
 This program is a shopping application.
 I love shopping application because they help us a lot to make a good choice and we can search and find stuff we need, so
 I decided to create a shopping application.
-Digi kala
+
+About project:
+Digi kala is this project name. 
+If you want to run this project, first you need to install JRE, or for more flexibility you can install JDK, then you have to run command 'javac filename.java', then you have to create jar file with 'jar cf jar-file input-file(s)' and with '	 jar -jar jarfilename.jar' you can run the program.
+When you run the program, you are in 'login menu', and with 'help' command you can see what commands are available in each menu. In the login menu you can create an account or login into an existing account, (you have to pick uniqe username for your account) we support 3 kind of account :1-admin, 2- seller, 3- buyer. each of them have its own atributes.
+
+If you login as an admin, you can create category, view users, delete user, edit your personal information, find person by its name, find product.
+each of these command should be in a specific structer and you can see these structer with 'help' command in this menu.
+
+If you login as a buyer, you can find product, comment on them and give them score.
+
+If you login as a seller, you can add product to a specific category, see you own products and remove product.
+
