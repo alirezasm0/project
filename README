@@ -1,8 +1,5 @@
 Introduction
 This program is a shopping application.
-When you run the project, you will be in the Login menu, you can type "help" command
-to see all commands available in this menu.
-this program supports 3 role, 1- admin, 2- seller, 3- buyer, you can choose any of them to 
-create account and each of them has some special ability.
-Admin can see other users, products and categories and aslo can create new categories.
-Each Product have a category.
+I love shopping application because they help us a lot to make a good choice and we can search and find stuff we need, so
+I decided to create a shopping application.
+Digi kala
