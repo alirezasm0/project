@@ -47,9 +47,32 @@ public class Database {
      * @param userAccount
      */
     public void addUser(UserAccount userAccount){
+                try{
+            String databaseDriver = "net.sourceforge.jtds.jdbc.Driver";
+            Class.forName(databaseDriver);
+            Connection connection = DriverManager.getConnection("jdbc:jtds:sqlserver://DESKTOP-JLBIAKI:1433/alireza;instance=MSSQLSERVER;");
+            Statement statement = connection.createStatement();
+            statement.executeUpdate("insert into user_account (user_id," +
+                    "password, " +
+                    "role)" +
+                    "VALUES (" +
+                    "'" + userAccount.getAccountName() + "'," +
+                    "'" + userAccount.getPassword()+ "'," +
+                    "'" + getRoleS(userAccount) + "'" + ");");
+        }catch (Exception e){
+            System.out.println(e);
+        }
         userAccountArrayList.add(userAccount);
     }
-
+    
+        private String getRoleS(UserAccount userAccount){
+        if(userAccount.getRole() == Roles.Seller){
+            return "seller";
+        }else if(userAccount.getRole() == Roles.Buyer){
+            return "buyer";
+        }else return "admin";
+    }
+    
     /**
      * function for get user by user name
      * @param username
